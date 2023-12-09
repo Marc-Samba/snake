@@ -11,12 +11,18 @@ FPS=20
 screen=pygame.display.set_mode((WIDTH,HEIGHT))
 clock = pygame.time.Clock()
 
-while True:
+running=True #flag
+while running:
 
     clock.tick(FPS)
 
     for event in pygame.event.get():   #s'il y a un évènement 
-        pass
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_q:
+                running=False
+        elif event.type==pygame.QUIT:
+            running=False
+
     
     screen.fill( SCREEN_COLOR ) #affichage de l'écran
 

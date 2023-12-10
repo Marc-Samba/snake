@@ -80,7 +80,7 @@ def status_game(gameover_on_exit):
 
         #si on va trop haut on redescend la tête à la dernière ligne
         elif snake[-1][0] < 0 :  
-            head=(LINE-1,snake[-1][1])
+            head=(args.height//args.tile_size-1,snake[-1][1])
             snake.pop()
             snake.append(head)
 
@@ -92,7 +92,7 @@ def status_game(gameover_on_exit):
         
         #si on va trop pas gauche on ramène la tête tout à droite 
         elif snake[-1][1]<0:
-            head=(snake[-1][0],COLUMN-1)
+            head=(snake[-1][0],args.width//args.tile_size-1)
             snake.pop()
             snake.append(head)
 

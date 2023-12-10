@@ -119,7 +119,7 @@ while running:
     
     #affichage du fruit
     fruit_rect=pygame.Rect(fruit[0]*args.tile_size,fruit[1]*args.tile_size,args.tile_size,args.tile_size)
-    pygame.draw.rect(screen,FRUIT_COLOR,fruit_rect)
+    pygame.draw.rect(screen,args.fruit_color,fruit_rect)
     
     
     #affichage du serpent
